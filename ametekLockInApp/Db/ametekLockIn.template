@@ -4,12 +4,12 @@
 
 # % gui, $(name=), edm, ametekLockIn.edl, P=$(P),Q=$(Q)
 
-record(ai, "$(P)$(Q):X")
+record(ai, "$(P)$(Q):MAGNITUDE")
 {
-	field(DESC, "Channel X value")
+	field(DESC, "Input Magnitude")
 	field(DTYP, "stream")
 	field(SCAN, ".1 second")
-	field(INP, "@ametekLockIn.proto getChannelX $(PORT)")
+	field(INP, "@ametekLockIn.proto getMagnitude $(PORT)")
 }
 
 record(ai, "$(P)$(Q):TC_RBV")

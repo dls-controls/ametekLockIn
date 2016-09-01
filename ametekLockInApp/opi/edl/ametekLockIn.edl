@@ -3,8 +3,8 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 556
-y 515
+x 560
+y 567
 w 320
 h 180
 font "arial-medium-r-18.0"
@@ -94,7 +94,7 @@ x 120
 y 96
 w 88
 h 24
-controlPv "$(P)$(Q):X"
+controlPv "$(P)$(Q):MAGNITUDE"
 displayMode "exp"
 precision 4
 fgColor index 16
@@ -121,7 +121,7 @@ fgColor index 14
 bgColor index 3
 useDisplayBg
 value {
-  "Channel X"
+  "Magnitude"
 }
 autoSize
 endObjectProperties
@@ -173,8 +173,8 @@ minor 1
 release 1
 x 296
 y 56
-w 16
-h 24
+w 9
+h 16
 font "arial-bold-r-14.0"
 fgColor index 14
 bgColor index 3
