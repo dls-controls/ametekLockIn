@@ -1,3 +1,5 @@
 <?xml version="1.0" ?>
 <components arch="linux-x86">
+	<asyn.AsynIP name="AM1_s" port="127.0.0.1:9004"/>
+	<ametekLockIn.ametekLockIn P="ametekExample" PORT="AM1_s" Q=":LOCKIN:" name="AM1"/>
 </components>

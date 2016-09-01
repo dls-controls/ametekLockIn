@@ -1,0 +1,44 @@
+# % macro, P,      PV name prefix
+# % macro, Q,      PV name suffix
+# % macro, PORT,   asyn port
+
+# % gui, $(name=), edm, ametekLockIn.edl, P=$(P),Q=$(Q)
+
+record(ai, "$(P)$(Q):X")
+{
+	field(DESC, "Channel X value")
+	field(DTYP, "stream")
+	field(SCAN, ".1 second")
+	field(INP, "@ametekLockIn.proto getChannelX $(PORT)")
+}
+
+record(ai, "$(P)$(Q):TC_RBV")
+{
+	field(DESC, "Time constant")
+	field(DTYP, "stream")
+	field(SCAN, "1 second")
+	field(INP, "@ametekLockIn.proto getTimeConstant $(PORT)")
+}
+
+record(mbbo, "$(P)$(Q):TC")
+{
+	field(DESC, "Set time constant")
+	field(DTYP, "stream")
+	field(OUT, "@ametekLockIn.proto setTimeConstant $(PORT)")
+	field(ZRST, "10us")
+	field(ONST, "20us")
+	field(TWST, "50us")
+	field(THST, "100us")
+	field(FRST, "200us")
+	field(FVST, "500us")
+	field(SXST, "1ms")
+	field(SVST, "2ms")
+	field(EIST, "5ms")
+	field(NIST, "10ms")
+	field(TEST, "20ms")
+	field(ELST, "50ms")
+	field(TVST, "100ms")
+	field(TTST, "200ms")
+	field(FTST, "500ms")
+	field(FFST, "1s")
+}

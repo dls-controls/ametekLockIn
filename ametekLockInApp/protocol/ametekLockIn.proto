@@ -1,0 +1,19 @@
+# Protocol file for Ametek 7270 lock-in amplifier
+# Edmund Warrick
+# 23/08/2016
+
+Terminator = CR LF;
+
+getChannelX {
+	    out "X.";
+	    in "%f";
+}
+
+getTimeConstant {
+		out "TC.";
+		in "%f";
+}
+
+setTimeConstant {
+		out "TC %i";
+}
