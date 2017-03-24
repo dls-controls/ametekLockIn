@@ -3,6 +3,9 @@
 # 23/08/2016
 
 Terminator = CR;
+ReplyTimeout = 2000;
+WriteTimeout = 200;
+ReadTimeout = 200;
 
 getMagnitude {
 	    out "MAG.";
