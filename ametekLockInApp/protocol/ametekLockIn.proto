@@ -1,4 +1,4 @@
-# Protocol file for Ametek 7270 lock-in amplifier
+# Protocol file for Ametek 7280 DSP lock-in amplifier
 # Edmund Warrick
 # 23/08/2016
 
@@ -8,15 +8,84 @@ WriteTimeout = 200;
 ReadTimeout = 200;
 
 getMagnitude {
-	    out "MAG.";
-	    in "%f";
+        out "MAG.";
+        in "%f";
 }
 
 getTimeConstant {
-		out "TC.";
-		in "%f";
+        out "TC";
+        in "%i";
 }
 
 setTimeConstant {
-		out "TC %i";
+        out "TC %i";
+}
+
+getACGainControl {
+        out "AUTOMATIC";
+        in "%i"
+}
+
+setACGainControl {
+        out "AUTOMATIC %i";
+}
+
+getACGain {
+        out "ACGAIN";
+        in "%i";
+}
+
+setACGain {
+        out "ACGAIN %i";
+}
+
+getStatus {
+        out "ST";
+        in "%i";
+}
+
+getOverloadByte {
+        out "N";
+        in "%i";
+}
+
+getSensitivity {
+        out "SEN.";
+        in "%f";
+}
+
+setSensitivity {
+        out "SEN %i";
+}
+
+getRefSource {
+        out "IE";
+        in "%i";
+}
+
+setRefSource {
+        out "IE %i";
+}
+
+getRefFreq {
+        out "FRQ.";
+        in "%f";
+}
+
+getRefPhase {
+        out "REFP.";
+        in "%f"
+}
+
+setAutoPhase {
+        out "AQN";
+}
+
+getRemoteControl {
+        out "REMOTE";
+        in "%i";
+}
+
+setRemoteControl {
+        out "REMOTE %i"
 }
