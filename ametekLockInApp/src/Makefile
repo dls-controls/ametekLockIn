@@ -3,20 +3,20 @@ TOP=../..
 include $(TOP)/configure/CONFIG
 
 # -------------------------------
-# Build an Diamond Support Module
+# Build a Diamond Support Module
 # -------------------------------
 
-LIBRARY_IOC += ametekLockIn
+LIBRARY_IOC += thorlabsMcls1
 
 # xxxRecord.dbd will be installed into <top>/dbd
-DBD += ametekLockIn.dbd
+DBD += thorlabsMcls1.dbd
 
-ametekLockIn_DBD += base.dbd
-ametekLockIn_DBD += stream.dbd
+thorlabsMcls1_DBD += base.dbd
+thorlabsMcls1_DBD += stream.dbd
 
 # The following are compiled and added to the support library
-ametekLockIn_LIBS += asyn
-ametekLockIn_LIBS += stream
-ametekLockIn_LIBS += $(EPICS_BASE_IOC_LIBS)
+thorlabsMcls1_LIBS += asyn
+thorlabsMcls1_LIBS += stream
+thorlabsMcls1_LIBS += $(EPICS_BASE_IOC_LIBS)
 
 include $(TOP)/configure/RULES
